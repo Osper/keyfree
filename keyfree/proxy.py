@@ -16,7 +16,7 @@ blacklist_response_headers = (
     "content-encoding"
 )
 whitelist_request_headers = (
-    "content-type"
+    "content-type", "kbn-xsrf", "kbn-version"
 )
 
 app = Flask(__name__)
@@ -89,6 +89,7 @@ def setup(**kwargs):
     if defaults['chunk_size'] == 0:
         defaults['chunk_size'] = None
     config.update(defaults)
+
 
 setup()
 
