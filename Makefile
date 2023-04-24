@@ -15,13 +15,13 @@ lint-%: venv-%
 test-%: venv-%
 	venv-$*/bin/py.test keyfree
 
-test: lint-python3 test-python2 test-python3
+test: lint-python3 test-python3
 
 clean:
 	rm -rf build dist *.egg-info
 
 clean-all: clean
-	rm -rf venv-python2 venv-python3
+	rm -rf venv-python3
 
 doc:
 	pandoc --from=markdown --to=rst --output=README.rst README.md

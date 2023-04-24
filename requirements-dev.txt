@@ -1,5 +1,5 @@
-pytest==3.0.3
-pytest-httpretty==0.2.0
+pytest==3
+pytest-httpretty
 flake8
-httpretty==0.8.14
+httpretty
 wheel
