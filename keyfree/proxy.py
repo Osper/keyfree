@@ -16,7 +16,8 @@ blacklist_response_headers = (
     "content-encoding"
 )
 whitelist_request_headers = (
-    "content-type"
+    "content-type",
+    "kbn-xsrf"
 )
 
 app = Flask(__name__)
